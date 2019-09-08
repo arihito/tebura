@@ -1,0 +1,187 @@
+// ---------------------------------------------------------------
+// header
+// ---------------------------------------------------------------
+.gl-header {
+	background: url("../images/header.jpg") center bottom no-repeat / cover;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+	position: relative;
+	&_group {
+		width: 640px;
+		height: 500px;
+	}
+	&_logo {
+		text-indent: -9999px;
+		width: 427px;
+		height: 293px;
+		margin: 0 auto 60px;
+		background: url("../images/logo_main.png") center center no-repeat / cover;
+	}
+	&_copy {
+		text-align: center;
+		font-size: 1.8rem;
+		line-height: 3;
+		letter-spacing: 10px;
+		font-weight: bold;
+		color: #333;
+		font-family: 'Noto Serif JP';
+	}
+}
+
+@media screen and (max-width: 1280px) {.gl-header {padding-top: 15%;}}
+@media screen and (max-width: 1000px) {.gl-header {padding-top: 20%;}}
+@media screen and (max-width: 768px) {
+
+.gl-header {
+	padding-top: 30%;
+	&_group {
+		width: 80%;
+	}
+	&_logo {
+		width: 100%;
+		height: 42%;
+		background-size: contain;
+		margin: 0 auto 40px;
+	}
+	&_copy {
+		font-size: .7rem;
+	}
+}
+
+}
+
+// ---------------------------------------------------------------
+// main
+// ---------------------------------------------------------------
+.flow {
+	text-indent: -9999px;
+	height: 450px;
+	background: url("../images/flow.jpg") center center no-repeat,
+							url("../images/bg_sand.jpg") 0 0 repeat;
+}
+@media screen and (max-width: 1000px) {
+	.flow {
+		height: 300px;
+		background: #ece3dc url("../images/flow.jpg") center center no-repeat / contain;
+  }
+}
+
+// ---------------------------------------------------------------
+// footer
+// ---------------------------------------------------------------
+.footer_title {
+	text-indent: -9999px;
+	width: 200px;
+	height: 100px;
+	background: url("../images/logo_footer.png") 0 -50px no-repeat / cover;
+	float: left;
+}
+.sns {
+	color: #666;
+}
+.sns:hover {
+	color: #ccc;
+	transition: .5s ease;
+}
+.credit {
+	margin-left: 30px;
+}
+.fa {
+	margin-right: 5px;
+}
+
+// ---------------------------------------------------------------
+// contact form
+// ---------------------------------------------------------------
+.formrun {
+	.custom-radio {
+		.custom-control-label {
+		font-size: 2.4rem;
+		}
+		.custom-control-label::before {
+			width: 36px;
+			height: 36px;
+			top: -.3rem;
+			left: -5rem;
+			border-color: #ced4da;
+			background-color: #e9ecef;
+		}
+		.custom-control-label::after {
+			width: 45px;
+			height: 45px;
+			top: -.7rem;
+			left: -5.4rem;
+		}
+	}
+	.input-group-text {
+		width: 200px;
+		font-size: 1.6rem;
+		font-weight: bold;
+		color: #666676;
+		padding-left: 10px;
+	}
+	.required::after {
+		content: "[ 必須 ]";
+		font-size: .8rem;
+		font-weight: bold;
+		color: #c66;
+		margin-left: 8px;
+	}
+	.form-control {
+		padding: 36px;
+		font-size: 2.4rem;
+		border-radius: 0 .25rem .25rem 0!important;
+	}
+	textarea.form-control {
+		padding: 18px 36px;
+	}
+	.form-control::placeholder {
+		color: #ccc;
+	}
+	/*.textarea-title {
+		position: relative;
+	}
+	.textarea-title::after {
+		content: "※お申込み時の入力は必要ありません";
+		display: block;
+		position: absolute;
+		bottom: 10px;
+		font-size: 1rem;
+		color: #aaa;
+	}*/
+	button[type=submit] {
+		padding: 24px 0;
+		color: #666676;
+		font-size: 1.6rem;
+		font-weight: bold;
+		border-color: #ced4da;
+		background-color: #e9ecef;
+		&:hover {
+			background-color: #ddd;
+		}
+	}
+}
+
+// ---------------------------------------------------------------
+// RESERVA button
+// ---------------------------------------------------------------
+.reserveBtn {
+	display: block;
+	width: 100%;
+	padding: 24px 0;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	border-radius: .3rem;
+	background: #4abaa7 url("../images/logo_reserva.png") 95% center no-repeat / 80px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	&:hover {
+		opacity: .8;
+		color: #fff;
+		text-decoration: none;
+	}
+}
