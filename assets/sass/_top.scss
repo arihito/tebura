@@ -31,7 +31,22 @@
 }
 
 @media screen and (max-width: 1280px) {.gl-header {padding-top: 15%;}}
-@media screen and (max-width: 1000px) {.gl-header {padding-top: 20%;}}
+@media screen and (max-width: 1024px) {.gl-header {padding-top: 20%;}}
+@media screen and (max-width: 1024px) and (max-height: 768px) {
+
+.gl-header {
+	padding-top: 10%;
+	&_group {
+		width: 65%;
+	}
+	&_logo {
+		width: 50%;
+		background-size: contain;
+		margin: 0 auto 30px;
+	}
+}
+
+}
 @media screen and (max-width: 768px) {
 
 .gl-header {
@@ -43,7 +58,7 @@
 		width: 100%;
 		height: 42%;
 		background-size: contain;
-		margin: 0 auto 40px;
+		margin: 0 auto 30px;
 	}
 	&_copy {
 		font-size: .7rem;
@@ -61,12 +76,65 @@
 	background: url("../images/flow.jpg") center center no-repeat,
 							url("../images/bg_sand.jpg") 0 0 repeat;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 	.flow {
 		height: 300px;
-		background: #ece3dc url("../images/flow.jpg") center center no-repeat / contain;
+		background: #ece3dc url("../images/flow.jpg") center center no-repeat / 60%;
   }
 }
+@media screen and (max-width: 768px) {
+	.flow {
+		height: 200px;
+		background: #ece3dc url("../images/flow.jpg") center center no-repeat / 80%;
+  }
+}
+
+// ---------------------------------------------------------------
+// scene
+// ---------------------------------------------------------------
+.main {
+  height: 2820px;
+  width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 1024px) {.main {width: 100%;height:140vh;background: url('../images/scene/top/main.jpg') center top no-repeat / contain;}}
+.main,.p01,.t01,.p02,.p03,.p05,.t05 {position: relative;}
+.p01,.p02,.p03,.p03,.p04,.p05,.t01,.t02,.t05,.p01::before,.t01::before,.p02::before,.p03::before,.p05::before,.t05::before {position: absolute;}
+@media screen and (max-width: 1024px) {.p01,.p02,.p03,.p03,.p04,.p05,.t01,.t02,.t05,.p01::before,.t01::before,.p02::before,.p03::before,.p05::before,.t05::before {display: none;}}
+.p01         {width: 560px;height: 416px;top:  164px;left:     0;background: url("../images/scene/top/01.png") 0 0 no-repeat;}
+.p01::before {width:  65px;height:  67px;top:  -63px;left: 121px;content: url("../images/scene/top/i02.png");}
+.t01         {width: 520px;height: 160px;top:  323px;right: 80px;}
+.t01::before {width: 202px;height: 115px;top: -200px;left: 166px;content: url("../images/scene/top/i01.png");}
+.p02         {width: 560px;height: 416px;top:  746px;right:    0;background: url("../images/scene/top/02.png") 0 0 no-repeat;}
+.p02::before {width:  58px;height:  88px;top: -169px;right: 98px;content: url("../images/scene/top/i03.png");}
+.t02         {width: 520px;height: 220px;top:  752px;left: 158px;}
+.p03         {width: 372px;height: 541px;top: 1017px;left:  78px;background: url("../images/scene/top/03.png") 0 0 no-repeat;z-index:3;}
+.p03::before {width: 193px;height: 118px;top:  121px;right:-95px;content: url("../images/scene/top/i04.png");}
+.p04         {width: 819px;height: 632px;top: 1447px;right: 70px;background: url("../images/scene/top/04.png") 0 0 no-repeat;}
+.p05         {width: 630px;height: 468px;top: 2126px;left:     0;background: url("../images/scene/top/05.png") 0 0 no-repeat;}
+.p05::before {width:  58px;height: 101px;top: -267px;left: 167px;content: url("../images/scene/top/i05.png");}
+.t05         {width: 420px;height: 230px;top: 2362px;right: 78px;}
+.t05::before {width:  61px;height:  77px;bottom:-100px;right:    0;content: url("../images/scene/top/i06.png");}
+.t01,.t02,.t05 {
+	letter-spacing: 5px;
+	h2 {
+		font-size: 2.4rem;
+		font-weight: bold;
+		font-family:'Noto Serif JP';
+		margin-bottom: 38px;
+		line-height: 1.8;
+	}
+	p {
+		font-size: 1.4rem;
+		line-height: 3.2;
+	}
+}
+.slide       {transition: ease-in-out 1s;}
+.slideL      {transform: translate(-800px, 0) scale(.2);opacity: 0;}
+.slideR      {transform: translate( 800px, 0) scale(.2);opacity: 0;}
+.slideL.show {transform: translate( 0, 0) scale(1) !important;opacity: 1;}
+.slideR.show {transform: translate( 0, 0) scale(1) !important;opacity: 1;}
 
 // ---------------------------------------------------------------
 // footer
@@ -90,6 +158,15 @@
 }
 .fa {
 	margin-right: 5px;
+}
+@media screen and (max-width: 768px) {
+	.footer_title {
+		background: url("../images/logo_footer.png") center center no-repeat / contain;
+	}
+	.credit {
+		font-size: 0.8rem;
+		line-height: 2;
+	}
 }
 
 // ---------------------------------------------------------------
@@ -160,6 +237,28 @@
 		background-color: #e9ecef;
 		&:hover {
 			background-color: #ddd;
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.formrun {
+		.custom-radio {
+			.custom-control-label {
+				font-size: 1.6rem;
+				padding-left: 60px;
+			}
+			.custom-control-label::before {
+				top: -.5rem;
+				left: 1rem;
+			}
+			.custom-control-label::after {
+				top: -.8rem;
+				left: .7rem;
+			}
+		}
+		.input-group-text {
+			width: 160px;
+			font-size: 1.2rem;
 		}
 	}
 }

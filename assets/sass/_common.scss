@@ -40,12 +40,6 @@ html, body {
 body > .wapper {
   height: auto;
 }
-.main {
-  height: 2160px;
-  width: 980px;
-  margin: 0 auto;
-  background: url("../images/main.jpg") center top no-repeat / cover;
-}
 .container {
   width: 980px;
   margin: 0 auto 100px;
@@ -53,7 +47,7 @@ body > .wapper {
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 .main {background-size: contain;}
 .main,.container {
   width: 100%;
